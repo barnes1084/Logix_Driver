@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9BE4A08-C01C-4780-A68D-D3B8980D68B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Logix</RootNamespace>
+    <AssemblyName>Logix</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CIP\CIP.ObjectClasses.cs" />
+    <Compile Include="CIP\CIP.SegmentEncoding.cs" />
+    <Compile Include="CIP\CIPConnectedServiceRequest.cs" />
+    <Compile Include="CIP\CIPConnectedServiceResponse.cs" />
+    <Compile Include="CIP\CIPConnection.cs" />
+    <Compile Include="CIP\CIPConnectionManager.cs" />
+    <Compile Include="CIP\CIPDeviceRevision.cs" />
+    <Compile Include="CIP\CIPEightBytes.cs" />
+    <Compile Include="CIP\CIPForwardCloseRequest.cs" />
+    <Compile Include="CIP\CIPForwardCloseResponse.cs" />
+    <Compile Include="CIP\CIPForwardOpenRequest.cs" />
+    <Compile Include="CIP\CIPForwardOpenResponse.cs" />
+    <Compile Include="CIP\CIPIdentity.cs" />
+    <Compile Include="CIP\CIPIntegerExtensions.cs" />
+    <Compile Include="CIP\CIPMessageRouterRequest.cs" />
+    <Compile Include="CIP\CIPMessageRouterResponse.cs" />
+    <Compile Include="CIP\CIPMultipleServiceRequestPacket.cs" />
+    <Compile Include="CIP\CIPMultipleServiceResponsePacket.cs" />
+    <Compile Include="CIP\CIPProtocolViolationException.cs" />
+    <Compile Include="CIP\CIPSegment.cs" />
+    <Compile Include="CIP\CIPShortString.cs" />
+    <Compile Include="CIP\CIPSockaddrInfo.cs" />
+    <Compile Include="CIP\CIPUnexpectedResponseException.cs" />
+    <Compile Include="EthernetIP\CPF.cs" />
+    <Compile Include="EthernetIP\CPFItem.cs" />
+    <Compile Include="EthernetIP\EIP.Commands.cs" />
+    <Compile Include="EthernetIP\EIP.DataTypes.cs" />
+    <Compile Include="EthernetIP\EIP.ErrorCodes.cs" />
+    <Compile Include="EthernetIP\EIP.LogixServices.cs" />
+    <Compile Include="EthernetIP\EIP.NetworkConstants.cs" />
+    <Compile Include="EthernetIP\EIPBadTypeException.cs" />
+    <Compile Include="EthernetIP\EIPCIPAddressItem.cs" />
+    <Compile Include="EthernetIP\EIPConnectedAddressItem.cs" />
+    <Compile Include="EthernetIP\EIPConnectedDataItem.cs" />
+    <Compile Include="EthernetIP\EIPEncaps.cs" />
+    <Compile Include="EthernetIP\EIPLogixRouterException.cs" />
+    <Compile Include="EthernetIP\EIPLogixServiceException.cs" />
+    <Compile Include="EthernetIP\EIPPacket.cs" />
+    <Compile Include="EthernetIP\EIPPacketFactory.cs" />
+    <Compile Include="EthernetIP\EIPProtocolViolationException.cs" />
+    <Compile Include="EthernetIP\EIPSequencedAddressItem.cs" />
+    <Compile Include="EthernetIP\EIPService.cs" />
+    <Compile Include="EthernetIP\EIPUnconnectedDataItem.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="LogixClientException.cs" />
+    <Compile Include="LogixNotConnectedException.cs" />
+    <Compile Include="LogixReadTagRequest.cs" />
+    <Compile Include="LogixSocketException.cs" />
+    <Compile Include="LogixString.cs" />
+    <Compile Include="LogixTcpClient.cs" />
+    <Compile Include="LogixTcpSocket.cs" />
+    <Compile Include="LogixUdpSocket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructPack.cs" />
+    <Compile Include="TagTypes.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
